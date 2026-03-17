@@ -12,6 +12,7 @@
             }
         ],
         "chainImageUrl": "https://static.l2protocol.com/images/icon.svg",
+        "graphUrl": "http://localhost:8000/subgraphs/name/l2p/",
         "minimumSelfDelegationAmount": 2001,
         "chainId": 12216,
         "active": true,
