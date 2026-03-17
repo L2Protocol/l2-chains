@@ -5,7 +5,7 @@
         "nativeCurrencySymbol": "L2P",
         "nativeCurrencyDecimals": 18,
         "rpcUrls": [ "https://rpc.l2protocol.com" ],
-        "blockExplorers": [ 
+        "blockExplorers": [
             {
                 "name": "Blockscout",
                 "url": "https://l2pscan.com"
@@ -14,6 +14,44 @@
         "chainImageUrl": "https://static.l2protocol.com/images/icon.svg",
         "minimumSelfDelegationAmount": 2001,
         "chainId": 12216,
-        "active": true
+        "active": true,
+        "contracts": [
+            {
+                "name": "validatorSet",
+                "address": "0x0000000000000000000000000000000000001000",
+                "createdAtBlock": 0,
+                "abi": false
+            },
+            {
+                "name": "slashIndicator",
+                "address": "0x0000000000000000000000000000000000001001",
+                "createdAtBlock": 0,
+                "abi": false                
+            },
+            {
+                "name": "systemReward",
+                "address": "0x0000000000000000000000000000000000001002",
+                "createdAtBlock": 0,
+                "abi": false                
+            },
+            {
+                "name": "stakeHub",
+                "address": "0x0000000000000000000000000000000000002002",
+                "createdAtBlock": 0,
+                "abi": true                
+            },
+            {
+                "name": "blsPrecompile",
+                "address": "0x0000000000000000000000000000000000000066",
+                "createdAtBlock": 0,
+                "abi": false                
+            },
+            {
+                "name": "stakeCredit",
+                "address": "0x0000000000000000000000000000000000002003",
+                "createdAtBlock": 0,
+                "abi": true                
+            }                                                 
+        ]
     }
 ]
