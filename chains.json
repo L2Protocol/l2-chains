@@ -53,6 +53,7 @@
                 "createdAtBlock": 0,
                 "abi": true                
             }                                                 
-        ]
+        ],
+        "testnet": false
     }
 ]
