@@ -21,7 +21,7 @@
                 "name": "validatorSet",
                 "address": "0x0000000000000000000000000000000000001000",
                 "createdAtBlock": 0,
-                "abi": false
+                "abi": true
             },
             {
                 "name": "slashIndicator",
