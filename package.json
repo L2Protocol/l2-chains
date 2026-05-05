@@ -1,0 +1,17 @@
+{
+  "name": "l2-chains",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/L2Protocol/l2-chains#readme",
+  "bugs": {
+    "url": "https://github.com/L2Protocol/l2-chains/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L2Protocol/l2-chains.git"
+  },
+  "author": "L2Protocol <github@l2protocol.com>",
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
