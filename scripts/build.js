@@ -3,11 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT      = path.join(__dirname, '..');
+const ROOT = path.join(__dirname, '..');
 const SRC_CHAINS = path.join(ROOT, 'src', 'chains.json');
-const ABIS_DIR   = path.join(ROOT, 'src', 'abis');
-const DIST_DIR   = path.join(ROOT, 'dist');
-const OUT_FILE   = path.join(DIST_DIR, 'chains.json');
+const ABIS_DIR = path.join(ROOT, 'src', 'abis');
+const DIST_DIR = path.join(ROOT, 'dist');
+const OUT_FILE = path.join(DIST_DIR, 'chains.json');
 
 function loadAbi(chainId, address) {
     const abiPath = path.join(ABIS_DIR, String(chainId), `${address}.json`);
@@ -27,40 +27,32 @@ function transformChain(chain) {
         rpcUrls,
         blockExplorers,
         chainImageUrl,
+        graphUrl,
         minimumSelfDelegationAmount,
         chainId,
         contracts,
-        testnet,
+        isTestnet,
+        isActive
     } = chain;
 
-    
-    const rpcUrl = Array.isArray(rpcUrls) ? rpcUrls[0] : rpcUrls;
-
-    
-    const explorer = Array.isArray(blockExplorers) ? blockExplorers[0] : blockExplorers;
-    const blockExplorerName = explorer?.name ?? null;
-    const blockExplorerUrl  = explorer?.url  ?? null;
-
-    
-    const transformedContracts = contracts.map(contract => {
-        const { abi, ...rest } = contract;
-        const resolvedAbi = abi === true ? loadAbi(chainId, contract.address) : null;
-        return { ...rest, abi: resolvedAbi };
-    });
-
     return {
-        id: chainId,
         name,
         nativeCurrencyName,
         nativeCurrencySymbol,
         nativeCurrencyDecimals,
-        rpcUrl,
-        blockExplorerName,
-        blockExplorerUrl,
-        contracts: transformedContracts,
-        isTestnet: testnet ?? false,
+        rpcUrls,
+        blockExplorers,
+        contracts: contracts.map(contract => {
+            const { abi, ...rest } = contract;
+            const resolvedAbi = abi === true ? loadAbi(chainId, contract.address) : null;
+            return { ...rest, abi: resolvedAbi };
+        }),
+        graphUrl,
         chainImageUrl,
-        minimumSelfDelegationAmount: String(minimumSelfDelegationAmount),
+        minimumSelfDelegationAmount,
+        chainId,
+        isActive,
+        isTestnet,        
     };
 }
 

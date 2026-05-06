@@ -4,18 +4,24 @@
         "nativeCurrencyName": "L2P",
         "nativeCurrencySymbol": "L2P",
         "nativeCurrencyDecimals": 18,
-        "rpcUrls": [ "https://rpc.l2protocol.com" ],
+        "rpcUrls": [ 
+            {
+                "url": "https://rpc.l2protocol.com",
+                "isPrimary": true
+            }
+         ],
         "blockExplorers": [
             {
                 "name": "Blockscout",
-                "url": "https://l2pscan.com"
+                "url": "https://l2pscan.com",
+                "isPrimary": true
             }
         ],
         "chainImageUrl": "https://static.l2protocol.com/images/icon.svg",
         "graphUrl": "http://localhost:8000/subgraphs/name/l2p/",
-        "minimumSelfDelegationAmount": 2001,
+        "minimumSelfDelegationAmount": "2001",
         "chainId": 12216,
-        "active": true,
+        "isActive": true,
         "contracts": [
             {
                 "name": "validatorSet",
@@ -54,6 +60,6 @@
                 "abi": true                
             }                                                 
         ],
-        "testnet": false
+        "isTestnet": false
     }
 ]
