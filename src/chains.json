@@ -58,7 +58,13 @@
                 "address": "0x0000000000000000000000000000000000002003",
                 "createdAtBlock": 0,
                 "abi": true                
-            }                                                 
+            },
+            {
+                "name": "governor",
+                "address": "0x0000000000000000000000000000000000002004",
+                "createdAtBlock": 0,
+                "abi": true                
+            }                                                
         ],
         "isTestnet": false
     }
