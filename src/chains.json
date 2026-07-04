@@ -39,7 +39,13 @@
                 "name": "systemReward",
                 "address": "0x0000000000000000000000000000000000001002",
                 "createdAtBlock": 0,
-                "abi": false                
+                "abi": false
+            },
+            {
+                "name": "govHub",
+                "address": "0x0000000000000000000000000000000000001007",
+                "createdAtBlock": 0,
+                "abi": true
             },
             {
                 "name": "stakeHub",
@@ -63,8 +69,14 @@
                 "name": "governor",
                 "address": "0x0000000000000000000000000000000000002004",
                 "createdAtBlock": 0,
-                "abi": true                
-            }                                                
+                "abi": true
+            },
+            {
+                "name": "timelock",
+                "address": "0x0000000000000000000000000000000000002006",
+                "createdAtBlock": 0,
+                "abi": false
+            }
         ],
         "isTestnet": false
     }
